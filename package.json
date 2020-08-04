@@ -1,0 +1,42 @@
+{
+  "name": "waves",
+  "version": "1.0.0",
+  "description": "giutar shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "saeed talebi",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@material-ui/core": "^4.11.0",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.22.0",
+    "concurrently": "^5.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "http-proxy-middleware": "^1.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.24",
+    "nodemon": "^2.0.4",
+    "react-dropzone": "^11.0.2",
+    "react-paypal-express-checkout": "^1.0.5",
+    "react-slick": "^0.25.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "async": "^3.2.0",
+    "connect-timeout": "^1.9.0",
+    "crypto-js": "^4.0.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.4.10"
+  }
+}

@@ -1,0 +1,41 @@
+input {
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  margin: 10px 0px 0px;
+  outline: none;
+}
+select,
+textarea {
+  outline: none;
+}
+button,
+input[type='submit'] {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 10px;
+  background: #e1ddc3;
+  margin-top: 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+.formBlock {
+  margin-bottom: 10px;
+
+  input.input_error {
+    border: 1px solid #f44336;
+  }
+}
+.error_label {
+  color: #f44336;
+  display: block;
+  font-size: 15px;
+}
+.success_label {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  border-radius: 6px;
+}

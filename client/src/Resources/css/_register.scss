@@ -1,0 +1,35 @@
+.register_login_container {
+  display: flex;
+  border: 1px solid #999592;
+  border-top-width: 5px;
+  margin: 80px 0px 110px 0px;
+  padding: 30px;
+  min-height: 430px;
+
+  & > form {
+    flex: 1;
+  }
+  h2 {
+    margin: 20px 0px;
+    text-transform: uppercase;
+    color: #686868;
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    width: 90%;
+  }
+}
+
+.left,
+.right,
+.block {
+  flex: 1;
+}
+.form_block_two {
+  display: flex;
+
+  & > .block:last-child {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,41 @@
+.shop_wrapper {
+  display: flex;
+
+  .left {
+    flex-grow: 1;
+
+    .collapse_title {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  .right {
+    flex-grow: 2;
+    margin-left: 50px;
+
+    .shop_options {
+      border-bottom: 1px solid #e8e8e8;
+      margin: 0 20px 20px 20px;
+
+      .shop_grids {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        .grid_btn {
+          padding: 10px 10px;
+          font-size: 20px;
+          color: #c6c6c6;
+
+          svg {
+            cursor: pointer;
+          }
+
+          &.active {
+            color: #727272;
+          }
+        }
+      }
+    }
+  }
+}
