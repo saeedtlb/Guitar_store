@@ -25,10 +25,10 @@ export default (state = {}, action) => {
     case LOGIN_USER:
       return {
         ...state,
-        loginSuccess: action.payload.loginSuccess
-          ? action.payload.loginSuccess
-          : false,
-        userData: action.payload.data ? action.payload.data : state.userData,
+        loginSuccess: action.payload.loginSuccess,
+        userData: action.payload.loginSuccess
+          ? action.payload.data
+          : state.userData,
       };
     case AUTH_USER:
       return {

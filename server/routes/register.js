@@ -85,12 +85,13 @@ router.post('/login', async (req, res) => {
 
     const match = await user.comparePassword(req.body.password);
     if (!match.loginSuccess)
-      return res.json({ loginSuccess: match.loginSuccess, message: match.msg });
+      return res.json({ loginSuccess: false, message: match.msg });
 
     // GENERATE TOKEN FOR USER
     const tuser = await user.generateToken();
+    console.log('come', user);
     res
-      .cookie('x_auth', tuser.token, { sameSite: 'none' })
+      .cookie('x_auth', tuser.token)
       .status(200)
       .json({ loginSuccess: true, data: user });
   } catch (err) {
@@ -111,10 +112,9 @@ router.get('/logout', auth, async ({ user }, res) => {
 // RESET USER
 router.post('/resetUser', (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
-    if (err) return res.json({ success: false, err });
+    if (err || !user) return res.json({ success: false, err });
     user.generateResetToken((err, user) => {
       if (err) return res.json({ success: false, err });
-      console.log(365, user.resetToken);
       sendMail(user.email, user.name, null, 'reset_password', user);
       return res.status(200).json({ success: true });
     });

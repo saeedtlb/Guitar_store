@@ -63,10 +63,6 @@ class Login extends Component {
   submitForm = async (event) => {
     event.preventDefault();
 
-    // if (event.keyCode !== 13) {
-    //   return;
-    // }
-
     const [formIsValid, dataToSubmit] = generateData(
       this.state.formdata,
       'login'

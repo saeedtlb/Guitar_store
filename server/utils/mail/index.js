@@ -52,11 +52,12 @@ const sendMail = async (to, name, token, type, data = null) => {
 
   const mail = mailOption(to, name, token, type, data);
 
-  transporter.sendMail(mail, (err, info) => {
-    if (err) console.log(err);
-    else console.log('Email sent');
+  try {
+    await transporter.sendMail(mail);
     transporter.close();
-  });
+  } catch (error) {
+    console.log('Somthing went wrong' + error);
+  }
 };
 
 module.exports = sendMail;

@@ -60,17 +60,33 @@ class Reset extends Component {
             }, 2000);
           });
         } else {
-          this.setState({
-            formError: true,
-            formErrorMessage: res.payload.message || 'somthing went wrong',
-          });
+          this.setState(
+            {
+              formError: true,
+              formErrorMessage: res.payload.message || 'somthing went wrong',
+            },
+            () => {
+              setTimeout(
+                () => this.setState({ formErro: false, formErrorMessage: '' }),
+                2000
+              );
+            }
+          );
         }
       });
     } else {
-      this.setState({
-        formError: true,
-        formErrorMessage: 'Please check your data',
-      });
+      this.setState(
+        {
+          formError: true,
+          formErrorMessage: 'Please check your data',
+        },
+        () => {
+          setTimeout(
+            () => this.setState({ formErro: false, formErrorMessage: '' }),
+            2000
+          );
+        }
+      );
     }
   };
 
