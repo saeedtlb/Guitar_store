@@ -27,76 +27,76 @@ import Cart from './components/User/Cart.jsx';
 import NotFound from './components/utils/Not_found';
 
 const Routes = () => {
-  return (
-    <Layout>
-      <Switch>
-        {/* PRIVATE */}
-        <Route
-          path="/user/dashboard"
-          exact
-          component={Auth(UserDashboard, true)}
-        />
-        <Route path="/user/cart" exact component={Auth(Cart, true)} />
-        <Route
-          path="/user/user_profile"
-          exact
-          component={Auth(UpdateProfile, true)}
-        />
-        <Route
-          path="/admin/add_product"
-          exact
-          component={Auth(AddProduct, true)}
-        />
-        <Route path="/admin/add_file" exact component={Auth(AddFile, true)} />
-        <Route
-          path="/admin/site_info"
-          exact
-          component={Auth(ManageSite, true)}
-        />
-        <Route
-          path="/admin/manage_categories"
-          exact
-          component={Auth(ManageCategories, true)}
-        />
+    return (
+        <Layout>
+            <Switch>
+                {/* PRIVATE */}
+                <Route
+                    path='/user/dashboard'
+                    exact
+                    component={Auth(UserDashboard, true)}
+                />
+                <Route path='/user/cart' exact component={Auth(Cart, true)} />
+                <Route
+                    path='/user/user_profile'
+                    exact
+                    component={Auth(UpdateProfile, true)}
+                />
+                <Route
+                    path='/admin/add_product'
+                    exact
+                    component={Auth(AddProduct, true)}
+                />
+                <Route
+                    path='/admin/add_file'
+                    exact
+                    component={Auth(AddFile, true)}
+                />
+                <Route
+                    path='/admin/site_info'
+                    exact
+                    component={Auth(ManageSite, true)}
+                />
+                <Route
+                    path='/admin/manage_categories'
+                    exact
+                    component={Auth(ManageCategories, true)}
+                />
 
-        {/* PUBLIC */}
-        <Route path="/register" exact component={Auth(Register, false)} />
-        <Route path="/reset_user" exact component={Auth(Reset, false)} />
-        <Route
-          path="/reset_password/:token"
-          exact
-          component={Auth(ResetPassword, false)}
-        />
-        <Route
-          path="/register_login"
-          exact
-          component={Auth(RegisterLogin, false)}
-        />
-        <Route path="/shop" exact component={Auth(Shop, null)} />
-        <Route
-          path="/product_detail/:id"
-          exact
-          component={Auth(ProductPage, null)}
-        />
-        <Route path="/" exact component={Auth(Home, null)} />
+                {/* PUBLIC */}
+                <Route
+                    path='/register'
+                    exact
+                    component={Auth(Register, false)}
+                />
+                <Route
+                    path='/reset_user'
+                    exact
+                    component={Auth(Reset, false)}
+                />
+                <Route
+                    path='/reset_password/:token'
+                    exact
+                    component={Auth(ResetPassword, false)}
+                />
+                <Route
+                    path='/register_login'
+                    exact
+                    component={Auth(RegisterLogin, false)}
+                />
+                <Route path='/shop' exact component={Auth(Shop, null)} />
+                <Route
+                    path='/product_detail/:id'
+                    exact
+                    component={Auth(ProductPage, null)}
+                />
+                <Route path='/' exact component={Auth(Home, null)} />
 
-        {/* NOT FOUND */}
-        <Route component={Auth(NotFound)} />
-      </Switch>
-    </Layout>
-  );
+                {/* NOT FOUND */}
+                <Route component={Auth(NotFound)} />
+            </Switch>
+        </Layout>
+    );
 };
-
-// window.addEventListener('click', (e) => {
-//   const allCookies = document.cookie.split(';');
-//
-//   for (let i = 0; i < allCookies.length; i++) {
-//     if (allCookies[i].split('=')[0] === 'x_auth') {
-//       console.log('come');
-//       allCookies = allCookies[i] + `=;expires=${new Date(0).toUTCString}`;
-//       break;
-//     }
-//   }
-// });
 
 export default Routes;
