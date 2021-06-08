@@ -6,3 +6,29 @@ You can also Sign in to site and add what ever you want to cart and checkout the
 you can click on forgot password and refresh via email. <br>
 
 I hope you enjoy it.
+
+## Demo
+
+### Landing page
+
+![landing page](./screenShots/main.png)
+
+### Login/Signin page
+
+![landing page](./screenShots/login.png)
+
+### Products page
+
+![landing page](./screenShots/shop.png)
+
+### Product detail
+
+![landing page](./screenShots/buy.png)
+
+### Cart
+
+![landing page](./screenShots/cart.png)
+
+### Profile
+
+![landing page](./screenShots/profile.png)
