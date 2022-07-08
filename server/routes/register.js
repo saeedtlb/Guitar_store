@@ -89,7 +89,6 @@ router.post('/login', async (req, res) => {
 
     // GENERATE TOKEN FOR USER
     const tuser = await user.generateToken();
-    console.log('come', user);
     res
       .cookie('x_auth', tuser.token)
       .status(200)
@@ -175,7 +174,7 @@ router.post('/uploadimage', auth, admin, formidable(), (req, res) => {
 router.get('/remove_image', auth, admin, (req, res) => {
   const id = req.query.public_id;
 
-  cloudinary.uploader.destroy(id, (error, response) => {
+  cloudinary.uploader.destroy(id, (error) => {
     if (error) return res.json({ success: false, error });
 
     res.status(200).json({ success: true });

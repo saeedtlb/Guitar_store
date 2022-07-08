@@ -15,7 +15,7 @@ import {
   RESET_USER,
 } from '../actions/types';
 
-export default (state = {}, action) => {
+const userReducer = (state = {}, action) => {
   switch (action.type) {
     case REGISTER_USER:
       return {
@@ -105,3 +105,5 @@ export default (state = {}, action) => {
       return state;
   }
 };
+
+export default userReducer;

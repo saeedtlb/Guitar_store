@@ -4,7 +4,7 @@ import CardBlockShop from '../utils/CardBlockShop.jsx';
 
 const LoadMoreCards = ({ grid, products, loadMore, size, limit }) => {
   return (
-    <div>
+    <>
       <div>
         <CardBlockShop grid={grid} products={products} />
       </div>
@@ -14,7 +14,7 @@ const LoadMoreCards = ({ grid, products, loadMore, size, limit }) => {
           <button onClick={() => loadMore()}>Load More</button>
         </div>
       ) : null}
-    </div>
+    </>
   );
 };
 

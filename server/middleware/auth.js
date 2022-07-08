@@ -7,8 +7,8 @@ const auth = async (req, res, next) => {
     const user = token ? await User.findByToken(token) : false;
     if (!user) return res.json({ isAuth: false });
 
-    req.token = token;
     req.user = user;
+    req.token = token;
 
     next();
   } catch (error) {

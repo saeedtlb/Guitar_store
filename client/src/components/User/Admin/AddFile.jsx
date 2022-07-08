@@ -31,10 +31,6 @@ class AddFile extends Component {
     this.renderDownloadLink(uploadFiles(null));
   }
 
-  componentWillUnmount() {
-    this.props.dispatch();
-  }
-
   renderDownloadLink = () => {
     this.props.dispatch(getDownloadLink()).then((res) => {
       this.setState({ files: res.payload });

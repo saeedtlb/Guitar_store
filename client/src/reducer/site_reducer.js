@@ -1,6 +1,6 @@
 import { GET_SITE_DATA, UPDATE_SITE_INFO } from '../actions/types';
 
-export default (state = {}, action) => {
+const siteReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_SITE_DATA:
       return {
@@ -16,3 +16,5 @@ export default (state = {}, action) => {
       return state;
   }
 };
+
+export default siteReducer;

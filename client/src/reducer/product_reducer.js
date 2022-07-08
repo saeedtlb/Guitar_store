@@ -12,7 +12,7 @@ import {
   CLEAR_PRODUCT_DETAIL,
 } from '../actions/types';
 
-export default (state = {}, action) => {
+const productReducer = (state = {}, action) => {
   switch (action.type) {
     case GET_PRODUCT_BY_SELL:
       return {
@@ -76,3 +76,5 @@ export default (state = {}, action) => {
       return state;
   }
 };
+
+export default productReducer;

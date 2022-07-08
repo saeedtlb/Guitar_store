@@ -3,7 +3,7 @@ const welcome = require('./welcom');
 const purchase = require('./purchase');
 const ResetPassword = require('./ResetPassword');
 
-// USE .env
+// USE .env file
 require('dotenv').config();
 
 const mailOption = (to, name, token, template, data) => {

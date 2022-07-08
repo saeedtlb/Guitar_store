@@ -19,7 +19,7 @@ const UserDashboard = (props) => {
           <MyButton
             type="default"
             title="Edit account info"
-            linkTo="user/user_profile"
+            linkTo="/user/user_profile"
           />
         </div>
         <div className="user_nfo_panel">
